@@ -1,0 +1,45 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+group 'fr.welsy.dawnofhelia'
+version '1.0.0'
+compileJava.options.encoding = "utf8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'de.vandermeer:asciitable:0.3.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+gradlePlugin {
+    plugins {
+        HeliaGradle {
+            id = 'fr.welsy.dawnofhelia.HeliaGradle'
+            implementationClass = 'fr.welsy.dawnofhelia.HeliaGradle'
+        }
+    }
+    automatedPublishing = false
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'fr.welsy.dawnofhelia'
+            artifactId = 'HeliaGradle'
+            version = '1.0'
+
+            from components.java
+        }
+    }
+}
