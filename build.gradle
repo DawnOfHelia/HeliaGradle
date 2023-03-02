@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.dawnofhelia'
-version '1.0.0'
+version '1.0'
 compileJava.options.encoding = "utf8"
 
 repositories {
