@@ -3,7 +3,6 @@ package fr.welsy.dawnofhelia;
 import fr.welsy.dawnofhelia.tasks.ZipAssets;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
-import org.gradle.api.file.SourceDirectorySet;
 import org.gradle.api.tasks.*;
 
 public class HeliaGradle implements Plugin<Project> {
