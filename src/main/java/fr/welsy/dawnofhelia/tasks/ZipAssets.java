@@ -3,23 +3,14 @@ package fr.welsy.dawnofhelia.tasks;
 import de.vandermeer.asciitable.AsciiTable;
 import de.vandermeer.asciithemes.TA_GridThemes;
 import de.vandermeer.skb.interfaces.transformers.textformat.TextAlignment;
-import de.vandermeer.translation.characters.Html2AsciiDoc;
-import de.vandermeer.translation.characters.Text2Html;
-import de.vandermeer.translation.targets.Text2AsciiDoc;
+
 import fr.welsy.dawnofhelia.console.UnicodeColor;
 import fr.welsy.dawnofhelia.file.ZipHelper;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.artifacts.Configuration;
 import org.gradle.api.artifacts.ResolvedArtifact;
-import org.gradle.api.logging.Logger;
 import org.gradle.api.tasks.TaskAction;
-import org.gradle.internal.impldep.org.apache.commons.io.FileUtils;
-import org.gradle.internal.impldep.org.apache.commons.io.filefilter.DirectoryFileFilter;
-import org.gradle.internal.impldep.org.apache.commons.io.filefilter.RegexFileFilter;
-import org.gradle.internal.logging.text.StyledTextOutput;
-import org.gradle.internal.logging.text.StyledTextOutputFactory;
 
-import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
