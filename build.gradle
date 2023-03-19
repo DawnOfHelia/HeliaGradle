@@ -16,6 +16,12 @@ dependencies {
     implementation 'de.vandermeer:asciitable:0.3.2'
 }
 
+pluginBundle {
+    website = 'https://github.com/DawnOfHelia/HeliaGradle'
+    vcsUrl = 'https://github.com/DawnOfHelia/HeliaGradle'
+    tags = ['mcp-reborn', 'zip', 'assets', 'mcp']
+}
+$
 gradlePlugin {
     plugins {
         HeliaGradle {
@@ -29,7 +35,7 @@ gradlePlugin {
 }
 
 publishing{
-    repositories{
+    repositories {
         mavenLocal()
     }
 }
